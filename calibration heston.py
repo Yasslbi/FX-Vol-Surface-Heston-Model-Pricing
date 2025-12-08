@@ -1257,18 +1257,14 @@ discount_ratio = price_dout / vanilla_price
 discount_percent = (1 - discount_ratio) * 100
 
 
-# ---------------------------------------------------------------
 # Print comparison
-# ---------------------------------------------------------------
 print("\nBarrier vs Vanilla Comparison (Heston MC)")
 print(f"\nVanilla put price        : {vanilla_price:.6f}  (std = {vanilla_std:.6f})")
 print(f"Down-and-out put price   : {price_dout:.6f}  (std = {std_dout:.6f})")
 print(f"Barrier discount ratio   : {discount_ratio:.6f}")
 print(f"Barrier cheaper by       : {discount_percent:.2f}%")
 
-# ---------------------------------------------------------------
 # Investor notional comparison
-# ---------------------------------------------------------------
 
 notional = 100_000_000  # 100 million
 
