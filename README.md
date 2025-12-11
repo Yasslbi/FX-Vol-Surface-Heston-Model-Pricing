@@ -181,9 +181,9 @@ Once an arbitrage-free volatility surface has been constructed using SVI, the ne
 
 At its core, Heston specifies a joint evolution for the asset price and its instantaneous variance. The dynamics under the risk-neutral measure are:
 
-dS_t = S_t * (rd - rf) * dt + S_t * sqrt(v_t) * dW1_t
-dv_t = kappa * (theta - v_t) * dt + sigma * sqrt(v_t) * dW2_t
-corr(dW1_t, dW2_t) = rho
+- dS_t = S_t * (rd - rf) * dt + S_t * sqrt(v_t) * dW1_t
+- dv_t = kappa * (theta - v_t) * dt + sigma * sqrt(v_t) * dW2_t
+- corr(dW1_t, dW2_t) = rho
 
 
 The innovation of this model lies in assigning a stochastic, mean-reverting structure to the variance process. The square-root diffusion keeps variance non-negative and allows volatility to rise sharply, decline gradually, and settle around a long-run level. This behaviour aligns with how volatility is observed in practice: it clusters, it reacts asymmetrically to market moves, and it exhibits persistence across time.
